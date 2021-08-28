@@ -45,12 +45,12 @@
 
 .brand-text-icon {
 	font-size: 26px;
-	font-weight: 500;
+	font-weight: 600;
 	font-family: 'Poppins', sans-serif;
 	color: $primary;
 	&:hover {
 		color: $primary;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 
@@ -62,6 +62,7 @@ header {
 
 	.navbar {
 		height: 80px;
+		font-weight: 500;
 
 		ul.navbar-nav {
 			li.nav-item {
