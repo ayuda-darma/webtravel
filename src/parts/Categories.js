@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+
 import Button from "elements/Button";
 
 export default function Categories({ data }) {
@@ -8,13 +9,13 @@ export default function Categories({ data }) {
 
                 <h4 className="mb-3 font-weight-medium">{category.name}</h4>
                 <div className="container-grid">
-                    {category.items.length === 0 ?
+                    {category.items.length === 0 ? (
                         <div className="row">
                             <div className="col-auto align-items-center">
                                 This is no property at this category
                             </div>
                         </div>
-                        :
+                    ) : (
                         category.items.map((item, index2) => {
                             return (
                                 <div
@@ -52,7 +53,7 @@ export default function Categories({ data }) {
 
                                 </div>
                             );
-                        })}
+                        }))}
                 </div>
 
             </section>

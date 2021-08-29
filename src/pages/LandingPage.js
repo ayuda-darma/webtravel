@@ -23,7 +23,7 @@ export default class LandingPages extends Component {
                     refMostPicked={this.refMostPicked}
                     data={landingPage.mostPicked}
                 />
-                <Categories data={landingPage.category} />
+                <Categories data={landingPage.categories} />
             </div>
         )
     }
