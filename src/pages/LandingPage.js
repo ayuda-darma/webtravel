@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 import Header from "parts/Header";
 import landingPage from "json/landingPage.json";
@@ -14,6 +14,19 @@ export default class LandingPages extends Component {
         super(props);
         this.refMostPicked = React.createRef();
     }
+
+    componentDidMount() {
+        window.title = "Staycation | Home";
+        window.scrollTo(0, 0);
+    }
+
+    // componentDidMount() {
+    //     document.title = "Staycation | Home";
+    //     window.scrollTo(0, 0);
+
+    //     if (!this.props.page.landingPage)
+    //         this.props.fetchPage(`/landing-page`, "landingPage");
+    // }
 
     render() {
         console.log(this.props);
