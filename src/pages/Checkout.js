@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 
 import Header from "parts/Header";
 import Button from "elements/Button";
@@ -19,7 +19,7 @@ import ItemDetails from "json/itemDetails.json";
 
 // import { submitBooking } from "store/actions/checkout";
 
-export default class Checkout extends Component {
+class Checkout extends Component {
   state = {
     data: {
       firstName: "",
@@ -43,7 +43,7 @@ export default class Checkout extends Component {
 
   componentDidMount() {
     window.scroll(0, 0);
-    document.title = "Staycation | Checkout";
+    document.title = "Relacation | Checkout";
   }
 
   // _Submit = (nextStep) => {
@@ -71,34 +71,32 @@ export default class Checkout extends Component {
 
   render() {
     const { data } = this.state;
-    const checkout = {
-      duration: 3
-    }
-    // const { checkout, page } = this.props;
-    // console.log(page, data);
-    // if (!checkout)
-    // return (
-    //   <div className="container">
-    //     <div
-    //       className="row align-items-center justify-content-center text-center"
-    //       style={{ height: "100vh" }}
-    //     >
-    //       <div className="col-3">
-    //         Pilih kamar dulu
-    //         <div>
-    //           <Button
-    //             className="btn mt-5"
-    //             type="button"
-    //             onClick={() => this.props.history.goBack()}
-    //             isLight
-    //           >
-    //             Back
-    //           </Button>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // );
+
+    const { checkout } = this.props;
+    console.log(data);
+    if (!checkout)
+      return (
+        <div className="container">
+          <div
+            className="row align-items-center justify-content-center text-center"
+            style={{ height: "100vh" }}
+          >
+            <div className="col-3">
+              Pilih kamar dulu
+              <div>
+                <Button
+                  className="btn mt-5"
+                  type="button"
+                  onClick={() => this.props.history.goBack()}
+                  isLight
+                >
+                  Back
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
 
     const steps = {
       bookingInformation: {
@@ -234,7 +232,9 @@ export default class Checkout extends Component {
 
 const mapStateToProps = (state) => ({
   checkout: state.checkout,
-  page: state.page,
+
 });
 
-// export default connect(mapStateToProps, { submitBooking })(Checkout);
+export default connect(mapStateToProps)(
+  Checkout
+);

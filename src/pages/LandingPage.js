@@ -16,12 +16,12 @@ export default class LandingPages extends Component {
     }
 
     componentDidMount() {
-        window.title = "Staycation | Home";
+        window.title = "Relacation | Home";
         window.scrollTo(0, 0);
     }
 
     // componentDidMount() {
-    //     document.title = "Staycation | Home";
+    //     document.title = "Relacation | Home";
     //     window.scrollTo(0, 0);
 
     //     if (!this.props.page.landingPage)

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import LandingPage from "pages/LandingPage";
-import DetailPages from "pages/DetailsPage";
+import DetailsPage from "pages/DetailsPage";
 import Example from "pages/Example";
 import Checkout from "pages/Checkout";
 
@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Route path="/" component={LandingPage}></Route> */}
-        <Route path="/properties/:id" component={DetailPages}></Route>
+        <Route exact path="/" component={LandingPage}></Route>
+        <Route exact path="/properties/:id" component={DetailsPage}></Route>
         <Route path="/checkout" component={Checkout}></Route>
         <Route path="/example" component={Example}></Route>
       </Router>
