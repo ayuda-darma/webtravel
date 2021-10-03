@@ -12,7 +12,7 @@ export default class Example extends Component {
         this.setState({ [e.target.name]: e.target.value });
     };
     render() {
-        console.log(this.state);
+
         return (
             <div className="container">
                 <div

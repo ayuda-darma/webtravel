@@ -17,7 +17,7 @@ export default function FeaturedImage({ data }) {
                                     <figure className="img-wrapper">
                                         <img
                                             className="img-cover"
-                                            src={item.url}
+                                            src={`https://admin-relacation.herokuapp.com/${item.imageUrl}`}
                                             alt={item._id}
                                         />
                                     </figure>

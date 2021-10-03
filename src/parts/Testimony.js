@@ -17,7 +17,7 @@ export default function Testimony({ data }) {
                             style={{ margin: `30px 0 0 30px` }}
                         >
                             <img
-                                src={data.imageUrl}
+                                src={`https://admin-relacation.herokuapp.com/${data.imageUrl}`}
                                 alt="Testimonial"
                                 className="position-absolute"
                                 style={{ zIndex: 1 }}

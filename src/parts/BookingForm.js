@@ -5,7 +5,7 @@ import propTypes from "prop-types";
 
 import Button from "elements/Button";
 import InputDate from "elements/Form/InputDate";
-import InputNumber from "elements/Form/InputNumber"
+import InputNumber from "elements/Form/InputNumber";
 
 class BookingForm extends Component {
   constructor(props) {
@@ -63,12 +63,12 @@ class BookingForm extends Component {
         },
       });
     }
-  }
+  };
 
   startBooking = () => {
     const { data } = this.state;
     this.props.startBooking({
-      _id: this.props.itemDetails._id,
+      _id: this.props.ItemDetails._id,
       duration: data.duration,
       date: {
         startDate: data.date.startDate,
@@ -80,15 +80,16 @@ class BookingForm extends Component {
 
   render() {
     const { data } = this.state;
-    const { itemDetails } = this.props;
+    const { ItemDetails } = this.props;
+
 
     return (
       <div className="card bordered" style={{ padding: "60px 80px" }}>
         <h4 className="mb-3">Start Booking</h4>
         <h5 className="h2 text-teal mb-4">
-          ${itemDetails.price}{" "}
+          ${ItemDetails.price}{" "}
           <span className="text-gray-500 font-weight-light">
-            per {itemDetails.unit}
+            per {ItemDetails.unit}
           </span>
         </h5>
 
@@ -111,11 +112,11 @@ class BookingForm extends Component {
         >
           You will pay{" "}
           <span className="text-gray-900">
-            ${itemDetails.price * data.duration} USD
+            ${ItemDetails.price * data.duration} USD
           </span>{" "}
           per{" "}
           <span className="text-gray-900">
-            {data.duration} {itemDetails.unit}
+            {data.duration} {ItemDetails.unit}
           </span>
         </h6>
 
@@ -134,7 +135,7 @@ class BookingForm extends Component {
 }
 
 BookingForm.propTypes = {
-  itemDetails: propTypes.object,
+  ItemDetails: propTypes.object,
   startBooking: propTypes.func,
 };
 
