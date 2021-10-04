@@ -1,7 +1,7 @@
 {
-	"homepage": "https://ayuda-darma.github.io/webtravel",
 	"name": "webtravel",
 	"version": "0.1.0",
+	"homepage": "https://ayuda-darma.github.io/webtravel",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.14.1",
@@ -20,8 +20,7 @@
 		"web-vitals": "^1.1.2"
 	},
 	"scripts": {
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build",
+		"predeploy": "npm run build && gh-pages -d build",
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
